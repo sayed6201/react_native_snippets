@@ -10,7 +10,8 @@ const Stack = createStackNavigator();
 function AuthNavigator() {
   console.log(Stack);
   return (
-    <Stack.Navigator screenOptions={{}} initialRouteName={ROUTES.LOGIN}>
+    <Stack.Navigator 
+      screenOptions={{}} initialRouteName={ROUTES.LOGIN}>
 
       {/* this is the first navigation  */}
       {/* all the screen will have navigation object as props */}
@@ -29,11 +30,13 @@ function AuthNavigator() {
           title: route.params.userId,
         })}
       />
+
       <Stack.Screen
         name={ROUTES.LOGIN}
         component={Login}
         options={{headerShown: false}}
       />
+
       <Stack.Screen 
         name={ROUTES.REGISTER} 
         component={Register} />
@@ -43,6 +46,7 @@ function AuthNavigator() {
         component={DrawerNavigator}
         options={{headerShown: false}}
       />
+
     </Stack.Navigator>
   );
 }
