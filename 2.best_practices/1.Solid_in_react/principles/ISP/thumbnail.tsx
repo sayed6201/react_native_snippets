@@ -6,6 +6,12 @@ interface IThumbnailProps {
 }
 
 export function Thumbnail(props: IThumbnailProps) {
+
+
+  // I — Interface Segregation - Clients should not be forced to depend on methods that they do not use
+  // only pass required props in a component
+  // thumbnail doesn't need all products attributes but the image
+
   // const { product } = props;
   const { imageUrl } = props;
 
