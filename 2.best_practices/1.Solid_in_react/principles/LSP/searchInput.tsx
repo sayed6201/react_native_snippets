@@ -6,6 +6,8 @@ interface ISearchInputProps
 }
 
 export function SearchInput(props: ISearchInputProps) {
+  
+  // the user can pass other props as restProps
   const { value, onChange, isLarge, ...restProps } = props;
 
   return (

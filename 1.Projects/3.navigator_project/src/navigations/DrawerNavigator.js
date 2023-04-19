@@ -56,6 +56,7 @@ function DrawerNavigator() {
         }}
       />
     </Drawer.Navigator>
+    
   );
 }
 

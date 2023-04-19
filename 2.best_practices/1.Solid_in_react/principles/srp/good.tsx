@@ -7,6 +7,13 @@ import { useProducts } from "./hooks/useProducts";
 import { useRateFilter } from "./hooks/useRateFilter";
 
 export function Good() {
+
+  // -----------------------------------------------------------------------------------
+  // S- Single responsibility - A class should have a single responsibility
+  // -----------------------------------------------------------------------------------
+  // Components purpose is to serve a single goal
+  // this fetches product and returns products
+  // this custom hooks uses useState() & useEffect hooks to fetch the data
   const { products } = useProducts();
 
   const { filterRate, handleRating } = useRateFilter();
