@@ -19,32 +19,32 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-      <SafeAreaProvider>
-        <KeyboardAvoidingView
-          behavior={Platform.OS === "ios" ? "padding" : "height"}
-          keyboardVerticalOffset={Platform.OS === "ios" ? -64:0}
-          style={{flex:1}}
-          >
-          <Stack.Navigator>
-            <Stack.Screen 
-              name="HomeScreen" 
-              component={HomeScreen} 
-              options={{
-                headerShown:false
-              }}
-            />
-            <Stack.Screen 
-              name="MapScreen" 
-              component={MapScreen} 
-              options={{
-                headerShown:false
-              }}
-            />
-          </Stack.Navigator>
-        </KeyboardAvoidingView>
-        
-        {/* <HomeScreen/> */}
-      </SafeAreaProvider>
+        <SafeAreaProvider>
+          <KeyboardAvoidingView
+            behavior={Platform.OS === "ios" ? "padding" : "height"}
+            keyboardVerticalOffset={Platform.OS === "ios" ? -64:0}
+            style={{flex:1}}
+            >
+            <Stack.Navigator>
+              <Stack.Screen 
+                name="HomeScreen" 
+                component={HomeScreen} 
+                options={{
+                  headerShown:false
+                }}
+              />
+              <Stack.Screen 
+                name="MapScreen" 
+                component={MapScreen} 
+                options={{
+                  headerShown:false
+                }}
+              />
+            </Stack.Navigator>
+          </KeyboardAvoidingView>
+          
+          {/* <HomeScreen/> */}
+        </SafeAreaProvider>
       </NavigationContainer>
     </Provider>
     
